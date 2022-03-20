@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      background-image:
+        url("https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg");
+
+      background-size: cover;
+
+
+    }
+
+    .div {
+      height: 1350px;
+      width: 800px;
+      background-color: #ffb3b3;
+      margin: 0;
+      position: absolute;
+      left: 22%;
+      opacity: 80%;
+      color: black;
+      padding-left: 30px;
+
+
+
+    }
+
+    .h1 {
+      text-align: center;
+      color: white;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-size: 40px;
+    }
+
+    .text {
+      text-align: center;
+      font-size: 20px;
+      color: white;
+
+    }
+
+    .name,
+    .email,
+    .age,
+    .que1,
+    .que2,
+    .que3,
+    .que4,
+    .comment {
+      font-size: 20px;
+    }
+
+    .input1 {
+      padding: 10px;
+      width: 500px;
+      font-size: 15px;
+    }
+
+    .input2 {
+      padding: 10px;
+      width: 500px;
+      font-size: 15px;
+    }
+
+    .input3 {
+      padding: 10px;
+      width: 500px;
+      font-size: 15px;
+    }
+
+    .select1 {
+      padding: 10px;
+      width: 500px;
+      font-size: 15px;
+    }
+
+    .radio {
+      font-size: 20px;
+    }
+
+    .select2 {
+      padding: 10px;
+      width: 500px;
+      font-size: 15px;
+    }
+
+    .checkbox {
+      font-size: 20px;
+    }
+
+    .comm {
+      padding: 30px;
+    }
+
+    .button {
+      text-align: center;
+      width: 500px;
+      padding: 15px;
+      background-color: green;
+      border-color: green;
+      margin: 0;
+      position: absolute;
+      left: 17%
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="h1">FreeCodeCamp Survery Form</h1>
+  <p class="text"><i>Thank you for taking time to help us improve the platform</i></p>
+  <div class="div">
+    <br>
+    <p id="name" class="name">Name</p>
+    <input id="input1" class="input1" type="text" placeholder="Enter your Name here">
+    <div id="EnterName"></div>
+    <p class="email">Email</p>
+    <input class="input2" type="email" placeholder="Enter your email here">
+    <p class="age">Age(Optional)</p>
+    <input class="input3" type="number" placeholder="Enter your age here">
+    <p class="que1">Which option best describes your current role?</p>
+    <label>
+      <select class="select1">
+        <option>Select Current role</option>
+        <option>Student</option>
+        <option>Full Time Job</option>
+        <option>Full Time Learner</option>
+        <option>Prefer not to say</option>
+        <option>Others</option>
+
+      </select>
+    </label>
+    <p class="que2">Would you recommend freeCodeCamp to a friend?</p>
+    <div class="radio">
+      <input type="radio" id="radio1" name="def" value="radio1">
+      <label for="radio1">Definately</label><br>
+      <input type="radio" id="radio2" name="def" value="radio2">
+      <label for="radio2">May Be</label><br>
+      <input type="radio" id="radio3" name="def" value="radio3">
+      <label for="radio3">Not sure</label>
+
+    </div>
+    <p class="que3">What is your favorite feature of freeCodeCamp?</p>
+    <select class="select2">
+      <option>Select an Option</option>
+      <option>Challanges</option>
+      <option>Projects</option>
+      <option>Community </option>
+      <option>OpenSource</option>
+    </select>
+    <p class="que4">What would you like to see improved?(Check all that apply)</p>
+    <label class="checkbox">
+      <input type="checkbox">Front-end Projects<br>
+      <input type="checkbox">Back-end Projects<br>
+      <input type="checkbox">Data Visualization<br>
+      <input type="checkbox">Challenges<br>
+      <input type="checkbox">Open Source Community<br>
+      <input type="checkbox">Gitter help rooms<br>
+      <input type="checkbox">Videos<br>
+      <input type="checkbox">City Meetups<br>
+      <input type="checkbox">Wiki<br>
+      <input type="checkbox">Forum<br>
+      <input type="checkbox">Additional Courses<br>
+    </label>
+    <p class="comment">Any Comments or Suggestions?</p>
+    <input class="comm" type="text" placeholder="Enter your comment here...."><br><br><br>
+    <button  class="button">Submit</button>
+  </div>
+<script>
+  $(document).ready(function(){
+    $('.button').click(function(){
+            var user = $('.input1').val();
+
+            if(user == ""){
+              $('#EnterName').html("Name field can't be empty");
+              $('#EnterName').css("color", "red");
+              return false;
+           }    
+        });
+  });
+</script>
+ 
+</body>
+
+</html>
